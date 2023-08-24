@@ -1,2 +1,2 @@
 # DS
-Belajar strukdat sambil mengerjakan tugasnya.
+Belajar strukdat sambil mengerjakan tugasnya sambil terpontang-panting
