@@ -1,2 +1,2 @@
 # DS
-Belajar strukdat sambil mengerjakan tugasnya sambil terpontang-panting
+Belajar Javascript sambil mengerjakan tugas Strukdat sambil terpontang-panting
