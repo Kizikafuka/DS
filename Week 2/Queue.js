@@ -96,30 +96,40 @@ function askChoice() {
                 break;
 
             case '3':
-                if (!queue.isEmpty()) {
+                if (queue.size() < 2) {
+                    console.log("Anda memerlukan setidaknya 2 item dalam antrian untuk melakukan swap");
+                    askChoice();
+                } else {
                     console.log(`Queue: ${queue.display()}`);
                     rl.question("Masukkan index 1 untuk ditukar: ", (index1) => {
                         rl.question("Masukkan index 2 untuk ditukar: ", (index2) => {
                             queue.swapItems(parseInt(index1), parseInt(index2));
                             console.log(`Queue: ${queue.display()}`);
                             askChoice();
-                   });
-                }); 
+                     });
+                    }); 
 
-                } else {
-                    console.log("Antrian kosong. Tidak dapat melakukan operasi swap.");
-                    askChoice();
                 }
                break;
 
             case '4':
+                if (queue.isEmpty()) {
+                    console.log("Antrian masih kosong. Tambahkan item untuk bisa melihat size dari antrian.");
+                    askChoice();
+                } else {
                 console.log(`Queue size: ${queue.size()}`);
                 askChoice();
+                }
                 break;
 
             case '5':
+                if (queue.isEmpty()) {
+                    console.log("Antrian kosong, silahkan tambahkan item pada antrian terlebih dahulu.");
+                    askChoice();
+                } else {
                 console.log(`Queue: ${queue.display()}`);
                 askChoice();
+                }
                 break;
 
             case '6':
